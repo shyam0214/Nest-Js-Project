@@ -10,11 +10,15 @@ import { BookMiddleware } from './book.middleware';
   exports: [],
 })
 
+
 export class book implements NestModule {
+
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(BookMiddleware).forRoutes('book');
   }
+
   constructor() {
     console.log('Book module');
   }
+
 }

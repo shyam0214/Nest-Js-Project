@@ -5,6 +5,7 @@ import { v4 as uuidv4} from "uuid"
 
 @Injectable()
 export class BookService {
+  
   public books: Book[] = [];
 
   // add book
@@ -15,7 +16,6 @@ export class BookService {
   }
 
   // update book
-
   updateBookService(book: Book):string {
     let index = this.books.findIndex( (c) => {
       return c.id != book.id;
