@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { book } from './book/book.module';
-import { UserModule } from './user/user.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { userModule } from './users/users.module';
 
 @Module({
-  imports: [book, UserModule],
+  imports: [MongooseModule.forRoot('mongodb+srv://shyamgupta:.T!8NRrzf6FyMYc@cluster0.dbdyccj.mongodb.net/shyamNest'),userModule],
   controllers: [],
   providers: [],
   exports:[]
